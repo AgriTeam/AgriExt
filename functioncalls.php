@@ -2,45 +2,51 @@
 
 include'includeparameters.php';
 
-$a = $_REQUEST['action'];
+login();
 
-linkHome();
-switch ($a) {
-	case 'houseHold':
-		HouseHoldInfo();
-		break;
-	
-	case 'houseHoldcrop':
-		HouseHoldcrop();
-		break;
-	case 'animalinfo':
-		AnimalInfo();
-		break;
+$auth = $_REQUEST['auth'];
 
-	case 'animalpdt':
-		AnimalProduct();
-		break;
-	
-	case 'cropab':
-		CropAbnormality();
-		break;
-	
-	case 'animalab':
-		AnimalAbnormality();
-		break;
-	case 'marktinfo':
-		market();
-		break;
-	
-	
-	case 'marktprice':
-		MarketPriceForm();
-		break;
-	
-	default:
-		# code...
-		break;
-}
+userAuthentication($con);
+
+//$a = $_REQUEST['action'];
+
+//linkHome();
+//switch ($a) {
+//	case 'houseHold':
+//		HouseHoldInfo();
+//		break;
+//	
+//	case 'houseHoldcrop':
+//		HouseHoldcrop();
+//		break;
+//	case 'animalinfo':
+//		AnimalInfo();
+//		break;
+
+//	case 'animalpdt':
+//		AnimalProduct();
+//		break;
+//	
+//	case 'cropab':
+//		CropAbnormality();
+//		break;
+//	
+//	case 'animalab':
+//		AnimalAbnormality();
+//		break;
+//	case 'marktinfo':
+//		market();
+//		break;
+//	
+//	
+//	case 'marktprice':
+//		MarketPriceForm();
+//		break;
+//	
+//	default:
+//		# code...
+//		break;
+//}
 
 ?>
 

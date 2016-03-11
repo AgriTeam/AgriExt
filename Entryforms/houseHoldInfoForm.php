@@ -1,12 +1,25 @@
 <?php
 function HouseHoldInfo(){
+    include'EntryContext/HHInfoEntryContext.php';
 ?>
 
 <form method = 'POST'>
 	<h3>ADD HOUSE HOLD INFORMATION</h3>
 	<div class = 'form-group'>
 		<label for = "name">Location</label>
-		<input type="text" class = "form-control" name = "location" id = "location"/>
+         
+        <select name="location" id="location">
+             <?php
+               $result = HHInfoContext(); 
+               foreach($result as $item)
+               {
+                  ?>
+            <option><?php echo $item['sub_county']?></option>
+            <?php
+               }
+            ?>
+               
+		</select>
 	</div>
 
 	<div class = "form-group">
